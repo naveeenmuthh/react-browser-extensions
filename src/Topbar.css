@@ -1,0 +1,22 @@
+.topbar{
+ display: flex;
+ flex-direction:row;
+ border-radius: 5px;
+ justify-content: space-between;
+ background-color: var(--widgetColor);
+ padding:10px;
+}
+
+.topbar-title{
+ display: flex;
+}
+
+.toggle-theme{
+background-color: hsl(226, 11%, 37%);
+border-radius: 7px;
+}
+
+.toggle-color{
+ background-color: var(--widgetColor);
+}
+ 

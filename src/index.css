@@ -1,0 +1,16 @@
+:root{
+  --bodyColor:hsl(226, 25%, 17%);
+  --widgetColor:hsl(225, 23%, 24%);
+  --textColor:hsl(200, 60%, 99%);
+  --statusButtonColor:hsl(226, 11%, 37%);
+}
+
+body{
+  background-color: var(--bodyColor);
+  color:hsl(0, 0%, 93%) ;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}

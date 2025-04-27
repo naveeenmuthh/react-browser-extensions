@@ -1,0 +1,24 @@
+.navbar{
+ display:flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.logo{
+ fill: white;
+}
+
+.navbar-toggle-btns{
+ display: flex;
+ gap:10px;
+ 
+}
+
+.navbar-toggle-btn{
+border-radius: 15px;
+background-color: var(--statusButtonColor);
+}
+
+.navbar-title{
+ color: hsl(226, 25%, 17%);
+}
