@@ -5,6 +5,10 @@
   --statusButtonColor:hsl(226, 11%, 37%);
 }
 
+*{
+  font-family: "Noto Sans", sans-serif;
+}
+
 body{
   background-color: var(--bodyColor);
   color:hsl(0, 0%, 93%) ;
