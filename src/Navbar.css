@@ -15,9 +15,11 @@
 }
 
 .navbar-toggle-btn{
-border-radius: 15px;
+border-radius: 12px;
 background-color: var(--statusButtonColor);
 font-weight: 400;
+border: none;
+outline: none;
 }
 
 .navbar-title{

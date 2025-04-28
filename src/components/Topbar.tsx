@@ -31,7 +31,7 @@ const Topbar = () => {
   return (
     <div className="topbar">
       <DarkLightSVG theme={isDarkTheme?"#ffff":"hsl(226, 25%, 17%)"}/>
-      <button className="toggle-theme" onClick={toggleTheme}><img src={isDarkTheme?lightThemeLogo:darkThemeLogo} alt="ToggleTheme" className="toggle-theme" /></button>
+      <button className="toggle-theme" onClick={toggleTheme}><img src={isDarkTheme?lightThemeLogo:darkThemeLogo} alt="ToggleTheme" /></button>
     </div>
   )
 }

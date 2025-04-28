@@ -3,6 +3,7 @@
   --widgetColor:hsl(225, 23%, 24%);
   --textColor:hsl(200, 60%, 99%);
   --statusButtonColor:hsl(226, 11%, 37%);
+  --widgetRemoveButtonColor: hsl(226, 11%, 37%);
 }
 
 *{
