@@ -18,6 +18,7 @@
 border-radius: 12px;
 background-color: var(--statusButtonColor);
 font-weight: 400;
+cursor: pointer;
 border: none;
 outline: none;
 }

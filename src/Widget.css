@@ -29,6 +29,7 @@ margin-left: 10px;
  background-color: var(--widgetRemoveButtonColor);
  font-weight: 400;
  border:0.5px solid black;
+ cursor: pointer;
  outline:none;
 }
 
@@ -88,5 +89,5 @@ label::after {
 
 input:checked + label:after {
  left: calc(100% - 15px);
- transform: translateX(-100%);
+ transform: translateX(-40%);
 }
