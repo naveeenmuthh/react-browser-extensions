@@ -10,7 +10,7 @@ import {changeTheme} from "../functions/changeTheme"
 
 const Topbar = () => {
 
-  const [isAllButtonActive,setAllButtonStatus,isActiveButtonActive,setActiveButtonStatus,isInactiveButtonActive,setInactiveButtonStatus,widgetData,setWidgetData,isDarkTheme,setDarkTheme] = useContext(Context);
+  const {isDarkTheme,setDarkTheme} = useContext(Context);
 
   console.log("isDarkTheme:",isDarkTheme,setDarkTheme);
 

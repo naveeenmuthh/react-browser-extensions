@@ -1,11 +1,10 @@
 import { useContext } from "react"
 import { Context } from "../App";
-import { activeStatusButtonColor } from "../functions/changeTheme";
 
 
 const Navbar = () => {
 
-  const [isAllButtonActive,setAllButtonStatus,isActiveButtonActive,setActiveButtonStatus,isInactiveButtonActive,setInactiveButtonStatus,widgetData,setWidgetData,isDarkTheme,setDarkTheme] = useContext(Context);
+  const {isAllButtonActive,setAllButtonStatus,isActiveButtonActive,setActiveButtonStatus,isInactiveButtonActive,setInactiveButtonStatus,isDarkTheme,} = useContext(Context);
 
 console.log("Context-Object:",Context);
 

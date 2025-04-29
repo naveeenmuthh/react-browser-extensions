@@ -4,28 +4,16 @@ import { Context } from "../App";
 const Widget:React.FC<{logo:string;name:string;description:string;isActive:boolean;keyToggle:number}> = ({logo,name,description,isActive,keyToggle}) => {
 
 
-  const [isAllButtonActive,setAllButtonStatus,isActiveButtonActive,setActiveButtonStatus,isInactiveButtonActive,setInactiveButtonStatus,widgetData,setWidgetData] = useContext(Context);
-
-const handleToggle = (name:string)=>{
-
- setWidgetData(()=>widgetData.map((wdata)=>{
-  if(name===wdata.name)
-     return {...wdata,isActive:!wdata.isActive}
-  return wdata;
- }))
-
-}
-
+  const {widgetData,setWidgetData} = useContext(Context);
 
 const removeWidget = (name:string)=>{
   console.log("Set Data:",widgetData);
   setWidgetData(()=>widgetData.filter((wdata)=>name!==wdata.name))
 }
 
-const handleInputChange = (event:any,name:string)=>{
+const handleInputChange = (event:React.ChangeEvent<HTMLInputElement>,name:string)=>{
 
-
-setWidgetData(()=>widgetData.map((data:any,)=>{
+setWidgetData(()=>widgetData.map((data:{ logo: string; name: string; description: string; isActive: boolean;})=>{
 
  console.log("Event Value", event.target.checked)
    
@@ -33,18 +21,9 @@ setWidgetData(()=>widgetData.map((data:any,)=>{
      return {...data,isActive:event.target.checked}
 return data;
 
-
 }));
 
-
-
-
-
 }
-
-
-
-
 
   return (
     <div className="widget-container">

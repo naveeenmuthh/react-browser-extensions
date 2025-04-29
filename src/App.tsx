@@ -8,10 +8,25 @@ import Widget from './components/Widget'
 
 
 import jsondata from '../external/data.json'
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 import React from 'react'
 
-export const Context = React.createContext([]);
+type AppContextType = {
+ isAllButtonActive:boolean;
+ setAllButtonStatus:Dispatch<SetStateAction<boolean>>;
+ isActiveButtonActive:boolean;
+ setActiveButtonStatus:Dispatch<SetStateAction<boolean>>;
+ isInactiveButtonActive:boolean;
+ setInactiveButtonStatus:Dispatch<SetStateAction<boolean>>;
+ widgetData:Array<{ logo: string; name: string; description: string; isActive: boolean;}>;
+ setWidgetData:Dispatch<SetStateAction<Array<{ logo: string; name: string; description: string; isActive: boolean;}>>>;
+ isDarkTheme:boolean;
+ setDarkTheme:Dispatch<SetStateAction<boolean>>;
+
+}
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const Context = React.createContext<AppContextType>({isAllButtonActive:true,setAllButtonStatus:()=>{},isActiveButtonActive:false,setActiveButtonStatus:()=>{},isInactiveButtonActive:false,setInactiveButtonStatus:()=>{},widgetData:[],setWidgetData:()=>{},isDarkTheme:true,setDarkTheme:()=>{}});
 
 function App() {
 
@@ -25,7 +40,7 @@ function App() {
 
   return (
     <>
-        <Context.Provider value={[isAllButtonActive,setAllButtonStatus,isActiveButtonActive,setActiveButtonStatus,isInactiveButtonActive,setInactiveButtonStatus,widgetData,setWidgetData,isDarkTheme,setDarkTheme]}>
+        <Context.Provider value={{isAllButtonActive,setAllButtonStatus,isActiveButtonActive,setActiveButtonStatus,isInactiveButtonActive,setInactiveButtonStatus,widgetData,setWidgetData,isDarkTheme,setDarkTheme}}>
         <Topbar/>
         <Navbar/>
         <div className="widgets-container">
@@ -39,12 +54,12 @@ function App() {
       else if(isActiveButtonActive)
       {
             if(isActive)
-              return <Widget key={i} logo={logo} name={name} description={description} isActive={isActive}/>
+              return <Widget key={i} logo={logo} name={name} description={description} isActive={isActive} keyToggle={i}/>
       }
       else if(isInactiveButtonActive)
      {
           if(!isActive)
-            return <Widget key={i} logo={logo} name={name} description={description} isActive={isActive}/>
+            return <Widget key={i} logo={logo} name={name} description={description} isActive={isActive} keyToggle={i}/>
      }
 
         })}
