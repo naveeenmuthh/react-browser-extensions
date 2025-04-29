@@ -19,10 +19,10 @@ const Topbar = () => {
     setDarkTheme(!isDarkTheme)
 
       if(isDarkTheme){
-           changeTheme("hsl(226, 11%, 37%)","hsl(0, 0%, 93%)","hsl(226, 25%, 17%)","hsl(0, 0%, 93%)")
+           changeTheme("hsl(226, 11%, 37%)","hsl(0, 0%, 93%)","hsl(226, 25%, 17%)","hsl(0, 0%, 93%)","hsl(0, 0%, 93%)")
       }
       else{
-        changeTheme("hsl(226, 25%, 17%)","hsl(225, 23%, 24%)","hsl(200, 60%, 99%)","hsl(226, 11%, 37%)")
+        changeTheme("hsl(226, 25%, 17%)","hsl(225, 23%, 24%)","hsl(200, 60%, 99%)","hsl(226, 11%, 37%)","hsl(226, 11%, 37%)")
       }
   }
 

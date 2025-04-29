@@ -34,7 +34,7 @@ function App() {
 
       if(isAllButtonActive)
       {
-        return <Widget key={i} logo={logo} name={name} description={description} isActive={isActive}/>
+        return <Widget key={i} logo={logo} name={name} description={description} isActive={isActive} keyToggle={i}/>
       }
       else if(isActiveButtonActive)
       {

@@ -5,3 +5,20 @@
  column-gap: 5px;
  font-weight: 400;
 }
+
+@media all and (max-width:375px){
+
+ .widgets-container{
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+ }
+
+.navbar{
+ flex-direction: column;
+ align-items: center;
+margin-bottom: 10px;
+}
+
+
+}
