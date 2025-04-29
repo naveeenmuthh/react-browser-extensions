@@ -3,7 +3,6 @@ import { Context } from "../App";
 
 const Widget:React.FC<{logo:string;name:string;description:string;isActive:boolean;keyToggle:number}> = ({logo,name,description,isActive,keyToggle}) => {
 
-
   const {widgetData,setWidgetData} = useContext(Context);
 
 const removeWidget = (name:string)=>{
