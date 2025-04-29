@@ -7,7 +7,7 @@ import Navbar from './components/Navbar'
 import Widget from './components/Widget'
 
 
-import jsondata from '../external/data.json'
+import jsondata from './data.json'
 import { Dispatch, SetStateAction, useState } from 'react'
 import React from 'react'
 

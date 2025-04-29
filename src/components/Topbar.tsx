@@ -2,8 +2,8 @@
 import { useContext } from "react";
 import { Context } from "../App";
 
-import lightThemeLogo from "../../external/assets/images/icon-sun.svg";
-import darkThemeLogo from "../../external/assets/images/icon-moon.svg"
+import lightThemeLogo from "../../public/images/icon-sun.svg";
+import darkThemeLogo from "../../public/images/icon-moon.svg"
 import DarkLightSVG from "../svg/DarkLightSVG";
 
 import {changeTheme} from "../functions/changeTheme"
